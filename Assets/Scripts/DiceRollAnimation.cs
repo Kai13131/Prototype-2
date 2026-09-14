@@ -23,13 +23,7 @@ public class DiceRollAnimation : MonoBehaviour
         playerGlowStartPosition = playerGlow.position;
         enmeyGlowStartPosition = enmeyGlow.position;
     }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Roll();
-        }
-    }
+
     public void Roll()
     {
         if (!playerIsRolling && !enemyIsRolling)
