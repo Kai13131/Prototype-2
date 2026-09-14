@@ -16,13 +16,20 @@ public class DiceRollAnimation : MonoBehaviour
     private bool playerIsRolling = false;
     private bool enemyIsRolling = false;
 
+    public Enemy enemy;
 
     void Start()
     {
         playerGlowStartPosition = playerGlow.position;
         enmeyGlowStartPosition = enmeyGlow.position;
     }
-    public Enemy enemy;
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Roll();
+        }
+    }
     public void Roll()
     {
         if (!playerIsRolling && !enemyIsRolling)
